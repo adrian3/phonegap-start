@@ -1,0 +1,4 @@
+phonegap-start
+==============
+
+Phonegap Start
