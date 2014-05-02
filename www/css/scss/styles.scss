@@ -1,0 +1,109 @@
+
+@import 'innsbruck';
+
+/*Additional CSS*/
+#jqt .toolbar {
+	background-repeat: no-repeat;
+	background-image: none;
+}
+
+
+
+
+$highlight: #f0f0ef;
+$lightfont: #e2e2e2;
+$darkfont: #666666;
+$beige: #ded8ca;
+$blue: #19acee;
+
+@function blue($opacity){
+    @return rgba(0,174,239,$opacity)
+}
+
+$iPad: "only screen and (min-device-width: 768px) and (max-device-width: 1024px)";
+
+@font-face {
+	font-family: 'OpenSansCondensedLight';
+	src: url("../fonts/OpenSans-CondLight-webfont.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+	-webkit-touch-callout: none;
+	/* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;
+	/* prevent webkit from resizing text to fit */
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+	/* prevent tap highlight color / shadow */
+    -webkit-user-select: none;
+	/* prevent copy paste, to allow, change 'none' to 'text' */
+}
+
+
+
+/* @group Bottom Bar */
+
+#jqt #bottombar {
+	background: -webkit-gradient(linear, left top, left bottom, from(black), to(black), color-stop(0.01, black), color-stop(0.02, #555555), color-stop(0.03, #2d2d2d), color-stop(0.5, #151515), color-stop(0.51, black));
+	min-height: 38px;
+	display: block;
+	width: 100%;
+	z-index: 900000 !important;
+	-webkit-box-shadow: 0 -0.05em 0 rgba(0, 0, 0, 0.9);
+	position: absolute;
+	bottom: 0;
+}
+
+#jqt #bottombar ul {
+	width: 100%;
+	border-width: 0;
+	margin: 0;
+	padding: 0;
+	min-height: 38px;
+	display: block;
+	background-color: #000;
+}
+
+#jqt #bottombar ul li {
+	width: 20%;
+	float: left;
+	display: inline-block;
+	margin: 0;
+	padding: 7px 0 0 0;
+	border-width: 0;
+	text-align: center;
+	background-image: none;
+	font-weight: normal;
+}
+
+#jqt #bottombar a {
+	background-color: #000;
+	min-height: 38px;
+}
+#jqt #bottombar a:active {
+	background-color: blue(1);
+}
+#jqt #tab_2 img {
+	margin-top: -5px;
+}
+#jqt #tab_4 img, #jqt #tab_3 img {
+	margin-top: 2px;
+}
+#jqt #tab_1 img, #jqt #tab_5 img {
+	margin-top: -5px;
+}
+
+#jqt #tab_1:active,
+#jqt #tab_2:active,
+#jqt #tab_3:active,
+#jqt #tab_4:active,
+#jqt #tab_5:active {
+	background-color: #000000;
+}
+
+#jqt a.list:active, #tab_1 a:active, #tab_2 a:active, #tab_3 a:active, #tab_4 a:active, #tab_5 a:active {
+	color: #fff;
+}
+
+/* @end */

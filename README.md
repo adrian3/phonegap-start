@@ -1,50 +1,34 @@
-# PhoneGap Build Starter Application
+# Cordova/Phonegap Starter Application
 
-> A Hello World application to get started with PhoneGap Build.
+> This is the starter application I use for my cordova apps. Setting up Analytics and getting jQTouch has always been harder than it should be, so I made this starter folder to save time. Your mileage may vary, but give it for a spin if you need a quick starting point that includes jQTouch. I also use CodeKit, so keep that in mind.
 
-## Usage
+## Usage Notes
+> Uses jQTouch and defaults to the iOS7 (ish) theme
+> It includes javascript functions for Google analytics Plugin
+> It includes a fixed footer
+> It includes fastclick.js
+> It includes jQuery
+> It includes my startup icons
 
-### Run Application
+- To use Compass in Codekit, select config file in "themes/scss" not the one in "compass/recipes" folder
 
-    /www/index.html
+- The only CSS file you should edit is "scss/styles.scss" because Compass will compile everything
 
-### Run Tests
+- Before building the final app files, be sure to change Compass config file to compressed and production. Don't include the "compass-recipes" or "scss" folders (just the styles.css and the maybe the img folder), you don't need them in your final app.
 
-    /www/spec.html
+# Analytics
+- To make analytics work you need to install this plugin by running: cordova plugin add https://github.com/danwilson/google-analytics-plugin.git 
 
-### PhoneGap/Build
+- Then change the UA-xxxxxxx-xx in default.js to your code
+- Tap the "Test Analytics" link on screen 1 in the simulator or on your device to make sure it is working
 
-Create a new app with the following repository:
+- You can see the visit get recorded within a few seconds by watching the live view within Google Analytics
 
-    https://github.com/phonegap/phonegap-start.git
+- If you want to be a good citizen you should ask your users before tracking their usage
 
-## Updating the Application
+# Cordova Build Applescript
+- Also included in this project is an applescript that saves me from typing "cordova build" into the terminal. Lazy, I know.
 
-The application is based on the [Apache Cordova Hello World][cordova-app] app.
+- To use, I just drop into my rood cordova folder. If you want to keep it open in Applescript Editor and hit "run" you can use the script. If you would rather just double click the icon you can use the app. 
 
-### 1. Update the Source
-
-    cp cordova-app-hello-world/www www/
-
-__Do not replace `www/config.xml`.__
-
-__Do not replace `www/img/logo.png`.__
-
-### 2. Update index.html
-
-Replace `<h1>Apache Cordova</h1>` with `<h1>PhoneGap</h1>`.
-
-### 3. Update PhoneGap Version
-
-    <preference name="phonegap-version" value="x.x.x" />
-
-### 4. Commit
-
-    $ git commit -am "Version x.x.x"
-
-### 5. Tag
-
-    $ git tag x.x.x
-
-[cordova-app]: http://github.com/apache/cordova-app-hello-world
-
+- All it does is open terminal, changes directories to the folder where the script is located, then it runs "cordova build" and finally minimizes the terminal window

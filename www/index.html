@@ -1,42 +1,97 @@
 <!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Hello World</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>PhoneGap</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <title>Starter app template by Adrian Hanft</title>
+</head>
+<body>
+  <div id="jqt">
+
+    <!-- home -->
+    <div id="home" class="current">
+      <div class="toolbar">
+        <h1>Home Headline</h1>
+        <a class="button slideup" id="infoButton" href="#screen1">About</a>
+      </div>
+      <div class="scroll">
+        <ul class="rounded">
+          <li class="arrow"><a href="#screen1">Screen 1</a></li>
+          <li class="arrow"><a href="#screen2">Screen 2</a></li>
+          <li class="arrow"><a href="#screen1" class="flipright">Flip right</a></li>
+          <li class="arrow"><a href="#screen2" class="flipleft">Flip left</a></li>
+          <li class="arrow"><a href="#screen1" class="cube">Cube</a></li>
+          <li class="arrow"><a href="#screen2" class="swap">Swap</a></li>
+        </ul>
+      </div>
+
+      <!-- tabbar -->
+      <div id="bottombar">
+        <div>
+          <ul>
+            <li id="tab_1"><a href="#screen2"><img src="images/go-previous.svg" width="30px"></a></li>
+            <li id="tab_2"><a href="#screen2"><img src="images/list.svg" width="30px"></a></li>
+            <li id="tab_3"><a href="#screen2"><img src="images/home.svg" width="17px"></a></li>
+            <li id="tab_4"><a href="#screen2"><img src="images/trophy.svg" width="20px"></a></li>
+            <li id="tab_5"><a href="#screen2"><img src="images/go-next.svg" width="30px"></a></li>
+          </ul>
         </div>
-        <script type="text/javascript" src="phonegap.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-            app.initialize();
-        </script>
-    </body>
+      </div>
+
+    </div>
+
+    <!-- screen 1 -->
+    <div id="screen1">
+      <div class="toolbar">
+        <h1>Animations</h1>
+        <a class="back" href="#">Back</a>
+      </div>
+      <div class="scroll">
+        <h2>Headline</h2>
+        <p class="info"><a href="#" onclick="trackpage('test');">Test Analytics</a> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, perspiciatis, non magni sed doloribus deleniti doloremque vitae unde praesentium aperiam itaque tenetur nostrum deserunt ratione alias! Deserunt, recusandae quos tempore.</p>
+      </div>
+    </div>
+
+    <!-- screen 2 -->
+    <div id="screen2">
+      <div class="toolbar">
+        <h1>Animations</h1>
+        <a class="back" href="#">Back</a>
+      </div>
+      <div class="scroll">
+        <h2>Headline</h2>
+        <ul class="rounded">
+          <li class="arrow"><a href="#screen2b">Screen 2b</a></li>
+        </ul>
+        <p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, perspiciatis, non magni sed doloribus deleniti doloremque vitae unde praesentium aperiam itaque tenetur nostrum deserunt ratione alias! Deserunt, recusandae quos tempore.</p>
+      </div>
+    </div>
+
+    <!-- screen 2b -->
+    <div id="screen2b">
+      <div class="toolbar">
+        <h1>Animations</h1>
+        <a class="back" href="#">Back</a>
+      </div>
+      <div class="scroll">
+        <h2>Headline</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, perspiciatis, non magni sed doloribus deleniti doloremque vitae unde praesentium aperiam itaque tenetur nostrum deserunt ratione alias! Deserunt, recusandae quos tempore.</p>
+      </div>
+    </div>
+
+  </div> <!-- End JQT -->
+
+  <script type="text/javascript" src="cordova.js"></script>
+  <script src="js/jqtouch.min.js" type="text/javascript" charset="utf-8"></script>
+  <!--<script src="js/jquery-1.7.min.js" type="application/x-javascript" charset="utf-8"></script>-->
+  <script src="js/jquery-1.11.0.min.js" type="application/x-javascript" charset="utf-8"></script>
+  <script src="js/jqtouch-jquery.min.js" type="application/x-javascript" charset="utf-8"></script>
+  <script src="js/defaults.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/fastclick.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript">app.initialize();</script>
+</body>
 </html>
